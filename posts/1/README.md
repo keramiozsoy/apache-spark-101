@@ -21,7 +21,6 @@ There are another APIs for software developers.
 - SQL ( https://spark.apache.org/docs/latest/api/sql/index.html ) 
 
 
-Apache Spark is a framework that enables us to perform parallel operations on big data sets.
+If you're curious, you can visit the frequently asked questions page by clicking the link below.
 
-
-There is also Apache Hadoop, another project that provides parallel processing of large data sets. Apache Hadoop uses the map-reduce model for itself.
+- https://spark.apache.org/faq.html
