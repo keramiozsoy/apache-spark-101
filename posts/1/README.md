@@ -1,9 +1,8 @@
 # Post 1
 
-## What is spark ?
+## What is Apache Spark
 
 Apache Spark is a multi-language engine for executing data engineering, data science, and machine learning on single-node machines or clusters. 
-
 
 Apache Spark is used variety of software developers. It has been written with Scala Programming Language.  But it is not mandatory to use Scala. 
 There are another APIs for software developers.
