@@ -14,4 +14,4 @@ Version is used apache-spark-3.3.2
 | ------------- | ------------- |
 | [Open](/posts/1) | What is Apache Spark |
 | [Open](/posts/2) | What are the programming models on Apache Spark |
-| [Open](/posts/3) | new post |
+| [Open](/posts/3) | Spark Architecture and RDDs |
