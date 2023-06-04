@@ -57,8 +57,6 @@ you are building execution plan step by step with java code and spark runs this 
 
 
 
-
-
 Execution plan is commonly called the Dagg, which stands for Directed Acyclic Graph.
 
 This is simple jargon to demonstrate for execution plan.
