@@ -1,6 +1,6 @@
 # Post 4
 
-## Prepare local development environment to play Apache Spark
+## Local development environment to learn Apache Spark
 
 
 We will create simple REST web service project which is more simple for examples.
@@ -13,13 +13,13 @@ Open https://start.spring.io
 
 - Project 		: Maven
 - Language		: Java
-- Spring Boot	: 3.1.0
+- Spring Boot	: 2.2.5.RELEASE
 - Group 		: com.spark
 - Artifact 		: demo
 - Name			: demo
 - Package		: com.spark.demo
 - Packaging		: Jar
-- Java			: 17
+- Java			: 8
 - Add Dependencies : SpringWeb 
 
 
@@ -50,29 +50,19 @@ curl http://localhost:8080
 Look at the pom.xml file what we added as dependencies.
 
 ```XML
-<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
-<dependency>
-    <groupId>org.apache.spark</groupId>
-    <artifactId>spark-core_2.13</artifactId>
-    <version>3.3.2</version>
-</dependency>
-
-
-
-<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
-<dependency>
-    <groupId>org.apache.spark</groupId>
-    <artifactId>spark-sql_2.13</artifactId>
-    <version>3.3.2</version>
-    <scope>provided</scope>
-</dependency>
-
-
-<!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-hdfs -->
-<dependency>
-    <groupId>org.apache.hadoop</groupId>
-    <artifactId>hadoop-hdfs</artifactId>
-    <version>3.3.2</version>
-    <scope>test</scope>
-</dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.10</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.10</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-hdfs</artifactId>
+            <version>2.2.0</version>
+        </dependency>
 ```
