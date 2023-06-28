@@ -1,11 +1,14 @@
 package com.spark.demo.example2;
 
+import com.twitter.chill.Tuple10Serializer;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import scala.Tuple2;
+import scala.Tuple22;
 
 import java.util.Arrays;
 import java.util.List;
@@ -53,7 +56,6 @@ public class Example2 {
         // - result.foreach(System.out::println);
         System.out.println("=== elements === ");
         result.collect().forEach(System.out::println);
-
 
         // context closed.
         context.close();
