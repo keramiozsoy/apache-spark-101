@@ -1,4 +1,4 @@
-package com.spark.demo.example1;
+package com.spark.demo.example2;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
@@ -11,12 +11,12 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/example1")
-public class Example1 {
+@RequestMapping(path = "/example2")
+public class Example2 {
 
     @GetMapping
     String example() {
-        final List<Double> inputData = Arrays.asList(1.223, 2.41333, 3.6, 7.5);
+        final List<Integer> inputData = Arrays.asList(4, 16, 25, 36);
 
         // https://spark.apache.org/docs/latest/api/java/index.html?org/apache/spark/SparkConf.html
         // local[*] means, use all cores on the machine
@@ -32,17 +32,27 @@ public class Example1 {
         // parallelize() converts pure data as RDD.
         // JavaRDD class is a wrapper which invokes Scala code because Apache Spark is written by Scala Language.
         // At this point, We have not loaded an RDD, we have added to the "execution plan".
-        final JavaRDD<Double> rdd = context.parallelize(inputData);
+        final JavaRDD<Integer> rdd = context.parallelize(inputData);
 
         System.out.println("At this line, Add breakpoint and look at Spark Web UI > http://0.0.0.0:4040");
 
+        final JavaRDD<Double> result = rdd.map(Math::sqrt);
 
-        // Let's say we want to sum up values of collection and, it is simple.
-        // The data can be stored on different JVMs or different computers at this point
-        // Apache Spark can handle and overcome the issue.
-        final Double result = rdd.reduce(Double::sum);
+        System.out.println("=== count of elements : ".concat(String.valueOf(result.count())).concat(" === "));
 
-        System.err.println("Reduced Answer ---> ".concat(String.valueOf(result)));
+
+        // While we're working with real data, the code is running on a cluster,
+        // it means there is not a terminal that can be show output of the code.
+        // The common solution is writing output to file. Instead of writing to a file,
+        // we can solve this need by writing to a file system, such as Apache HDFS.
+        // ---
+        // I was getting java.io.NotSerializableException: java.io.PrintStream
+        // I prefer to write
+        // - result.collect().forEach(System.out::println);
+        // instead of
+        // - result.foreach(System.out::println);
+        System.out.println("=== elements === ");
+        result.collect().forEach(System.out::println);
 
 
         // context closed.
