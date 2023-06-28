@@ -16,4 +16,5 @@ Version is used apache-spark-2.0.0
 | [Open](/posts/2) | What are the programming models on Apache Spark |
 | [Open](/posts/3) | Spark Architecture and RDDs |
 | [Open](/posts/4) | Local development environment to learn Apache Spark |
-| [Open](/posts/5) | - |
+| [Open](/posts/5) | Lets take a look at Apache Spark through samples |
+| [Open](/posts/6) | - |
