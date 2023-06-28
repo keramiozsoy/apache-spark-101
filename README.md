@@ -7,7 +7,7 @@ Offical website
 
 - https://spark.apache.org
 
-Version is used apache-spark-3.3.2
+Version is used apache-spark-2.0.0
 
 
 | Link | Name   |
