@@ -18,5 +18,5 @@ Version is used apache-spark-2.0.0
 | [Open](/posts/4) | Local development environment to learn Apache Spark |
 | [Open](/posts/5) | Apache Spark sum operation example |
 | [Open](/posts/6) | Apache Spark sqrt operation example |
-| [Open](/posts/7) | - |
+| [Open](/posts/7) | Apache Spark read log file with PairRDDs example  |
 
