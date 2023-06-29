@@ -29,7 +29,7 @@ public class Example1 {
         // Context is a connection to spark cluster.
         final JavaSparkContext context = new JavaSparkContext(conf);
 
-        // parallelize() converts pure data as RDD.
+        // parallelize() converts hard coded (in memory java collections) pure data as RDD.
         // JavaRDD class is a wrapper which invokes Scala code because Apache Spark is written by Scala Language.
         // At this point, We have not loaded an RDD, we have added to the "execution plan".
         final JavaRDD<Double> rdd = context.parallelize(inputData);

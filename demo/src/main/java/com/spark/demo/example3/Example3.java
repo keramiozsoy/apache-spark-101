@@ -44,7 +44,7 @@ public class Example3 {
         // At this point, We have not loaded an RDD, we have added to the "execution plan".
         final JavaRDD<String> rdd = context.parallelize(inputData);
 
-        System.out.println("At this line, Add breakpoint and look at Spark Web UI > http://0.0.0.0:4040");
+        System.out.println("=====> At this line, Add breakpoint and look at Spark Web UI > http://0.0.0.0:4040");
 
 
         // https://spark.apache.org/docs/latest/api/java/index.html?org/apache/spark/api/java/JavaPairRDD.html
@@ -63,7 +63,7 @@ public class Example3 {
 
         final JavaPairRDD<String, Long> reducedRDD = pairRDD.reduceByKey((value1, value2) -> value1 + value2);
 
-        reducedRDD.foreach(tuple -> System.out.println(tuple._1() + " has " + tuple._2() + " values "));
+        reducedRDD.foreach(tuple -> System.out.println("=====> " + tuple._1() + " has " + tuple._2() + " values "));
         // context closed.
         context.close();
 
