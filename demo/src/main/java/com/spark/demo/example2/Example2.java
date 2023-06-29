@@ -32,16 +32,16 @@ public class Example2 {
         // Context is a connection to spark cluster.
         final JavaSparkContext context = new JavaSparkContext(conf);
 
-        // parallelize() converts pure data as RDD.
+        // parallelize() converts hard coded (in memory java collections) pure data as RDD.
         // JavaRDD class is a wrapper which invokes Scala code because Apache Spark is written by Scala Language.
         // At this point, We have not loaded an RDD, we have added to the "execution plan".
         final JavaRDD<Integer> rdd = context.parallelize(inputData);
 
-        System.out.println("At this line, Add breakpoint and look at Spark Web UI > http://0.0.0.0:4040");
+        System.out.println("=====> at this line, Add breakpoint and look at Spark Web UI > http://0.0.0.0:4040");
 
         final JavaRDD<Double> result = rdd.map(Math::sqrt);
 
-        System.out.println("=== count of elements : ".concat(String.valueOf(result.count())).concat(" === "));
+        System.out.println("=====> count of elements : ".concat(String.valueOf(result.count())));
 
 
         // While we're working with real data, the code is running on a cluster,
@@ -54,7 +54,7 @@ public class Example2 {
         // - result.collect().forEach(System.out::println);
         // instead of
         // - result.foreach(System.out::println);
-        System.out.println("=== elements === ");
+        System.out.println("=====> elements ");
         result.collect().forEach(System.out::println);
 
         // context closed.
