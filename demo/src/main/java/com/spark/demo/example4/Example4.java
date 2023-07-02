@@ -74,7 +74,7 @@ public class Example4 {
         // There is a map to show, word and same word of count
         final Map<String, Long> stringLongMap = wordsRDD.countByValue();
 
-        stringLongMap.forEach((key, value) -> System.out.println("=====> " + key + " - " + value));
+        stringLongMap.forEach((key, count) -> System.out.println("=====> " + key + " - " + count));
 
 
         try {
@@ -86,7 +86,27 @@ public class Example4 {
 
         // context closed.
         context.close();
-
+// Result
+//
+// =====> 8-1
+// =====> 4-3
+// =====> 1632-1
+// =====> 5-1
+// =====> ERROR-2
+// =====> Wednesday-1
+// =====> 0408-1
+// =====> FATAL-1
+// =====> 1942-1
+// =====> Saturday-1
+// =====> 0405-1
+// =====> WARN-3
+// =====> Tuesday-3
+// =====> Friday-1
+// =====> #-6
+// =====> 1854-1
+// =====> September-6
+// =====> 7-1
+// =====> 0406-1
 
         return "Example is worked.";
     }

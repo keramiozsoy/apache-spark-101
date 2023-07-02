@@ -1,6 +1,6 @@
 # Post 6
 
-## Apache Spark sqrt operation example
+## Apache Spark Java sqrt operation example
 
 - Example2 is about sqrt operation
 

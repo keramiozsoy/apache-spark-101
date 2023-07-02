@@ -1,6 +1,6 @@
 # Post 7
 
-## Apache Spark Java read fake log file format with method of PairRDD example 
+## Apache Spark Java read fake log file format with PairRDD function example
 
 
 Let's say we have got a log file for our app. 

@@ -1,6 +1,6 @@
 # Post 5
 
-## Apache Spark sum operation example
+## Apache Spark Java sum operation example
 
 
 - Example1 is about sum operation
