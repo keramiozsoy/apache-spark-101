@@ -1,53 +1,40 @@
 # Post 4
 
-## Local development environment to learn Apache Spark
+## Java local development environment to learn Apache Spark
 
+We will create simple REST web service project which is more simple for examples. The project is built with Spring Boot  (https://spring.io/projects/spring-boot) and add simple java dependencies on the project.
 
-We will create simple REST web service project which is more simple for examples.
+* Open https://start.spring.io
 
+* Project : Maven
 
-We will use Spring Boot framework and add simple java dependecies on project.
+* Language : Java
 
+* Spring Boot : 2.2.5.RELEASE
 
-Open https://start.spring.io
+* Group : com.spark
 
-- Project 		: Maven
-- Language		: Java
-- Spring Boot	: 2.2.5.RELEASE
-- Group 		: com.spark
-- Artifact 		: demo
-- Name			: demo
-- Package		: com.spark.demo
-- Packaging		: Jar
-- Java			: 8
-- Add Dependencies : SpringWeb 
+* Artifact : demo
 
+* Name : demo
 
-Click Generate Button and open project with your favorite IDE.(Intellij, Eclipse etc.)
+* Package : com.spark.demo
 
+* Packaging : Jar
 
-### Run Project
+* Java : 8
 
-you can build and run on terminal 
+* Add Dependencies : SpringWeb
 
-```SHELL
-cd /demo
+Create and open project with your favorite IDE.
 
-mvn clean install
+* IntelliJ Idea
 
-mvn spring-boot:run
-```
+* VSCode
 
-Open another terminal and check result with below command
+* Eclipse
 
-```SHELL
-curl http://localhost:8080
-```
-
-
-### Adds apache spark specific dependencies
-
-Look at the pom.xml file what we added as dependencies.
+Open pom.xml file and add additional apache spark dependencies.
 
 ```XML
         <dependency>
@@ -66,3 +53,15 @@ Look at the pom.xml file what we added as dependencies.
             <version>2.2.0</version>
         </dependency>
 ```
+
+Let’s check last status on terminal.
+
+```SHELL
+cd /demo
+
+mvn clean install
+
+mvn spring-boot:run
+```
+
+Everything seems ok.
