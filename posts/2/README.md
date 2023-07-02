@@ -4,11 +4,11 @@
 
 There are two different major programming models in Spark.
 
-- Apache Spark RDD (the oldest style) (Resilient Distributed Datasets (RDD) to perform parallel processing across a cluster or computer processors.) 
+- Apache Spark RDD (the oldest style) : Resilient Distributed Datasets (RDD) to perform parallel processing across a cluster or computer processors. 
 
 - Apache Spark SQL (newer API than RDDs) (Data frame, DataSets APIs)
 
-If you're interested in other things, here are the other libraries
+If you're interested in other topics, here are some additional libraries.
 
 - Apache Spark MLib ( Machine learning library )
 - Apache Spark GraphX ( Graph processing )
